@@ -1,0 +1,47 @@
+img{
+    border-radius: 25px;
+}
+
+body{
+    position: relative;
+}
+
+#retour{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+
+#createPDF{
+    position: absolute;
+    bottom: 25%;
+    right: 13%;
+}
+
+.btn-screen2{
+    width: 350px;
+    height: 80px;
+    font-size: 35px;
+    font-weight: 900;
+    font-family: "Quicksand";
+    border-radius: 25px;
+    background-color: #e626b5;
+}
+ 
+#pdf{
+    background-color: white;
+    width: 595px;
+    height: 842px;
+    padding: 10px;    
+}
+
+#changeColor{
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+}
+
+.settingBox{
+    min-height: 100px;
+    background-color: antiquewhite;
+}
