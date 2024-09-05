@@ -8,7 +8,6 @@ function PersonalInfos(){
   const ulExp = document.querySelector("#expUl");
   const ulSkill = document.querySelector("#skillUl");
   const ULS = [ulHobby, ulExp, ulSkill]
-  console.log(ulHobby)
 
   const inputSrc = document.querySelectorAll(".InputText");
   const photoInput = document.getElementById("photoID")
@@ -39,9 +38,14 @@ function PersonalInfos(){
     return acc;
   }, {})
 
-  console.log(MoreInfoCategories)
- 
+  const JSONInfos = JSON.stringify(newInputValues)
+  const JSONAdditionalInfos = JSON.stringify(MoreInfoCategories)
   
+  sessionStorage.setItem("test2", JSONInfos)
+  sessionStorage.setItem("test2b", JSONAdditionalInfos)
+
+  
+  /*
     return(
         <div className="CV_body">
           
@@ -83,7 +87,7 @@ function PersonalInfos(){
         <Draggable><li key={index}>{e}</li></Draggable>
       ))}
         </div>
-    )
+    )*/
 }
 
 export default PersonalInfos

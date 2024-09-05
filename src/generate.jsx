@@ -8,7 +8,6 @@ import SettingBox from "./settingBox";
 function Generation(){
 
     const [colorSetting, setColorSetting] = useState(false);
-    const memorized = useMemo(() => console.log("hello"),[colorSetting])
 
     const createPDF = async () => {
         const canvas = await html2canvas(document.querySelector('#pdf'));
@@ -17,16 +16,17 @@ function Generation(){
         pdf.addImage(imgData, 'PNG', 0, 0, 595, 842); // A4 dimensions
         pdf.save('Votre-CV.pdf');
       };
+
+      PersonalInfos()
       
     return(
         <div id="generationPage">
         <Link to="/"><button id="retour" className="btn-screen2">Retour</button></Link>   
             <div id="pdf">
-                <PersonalInfos></PersonalInfos>
+              
                 </div> 
                 <button onClick={createPDF} className="btn-screen2" id="createPDF">Télécharger le PDF</button>
                 <button className="btn-screen2" id="colorsSettings" onClick={() => setColorSetting(true)}>Changer de couleur</button>
-                {colorSetting && memorized}
         </div>
     )
 }
