@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import "./generate.css"
-import PersonalInfos from "./personalInfo";
 import html2canvas from "html2canvas";
 import {jsPDF} from 'jspdf'
 import { useState, useMemo } from "react";
+import DraggableItems from "./draggableItems";
 import SettingBox from "./settingBox";
 function Generation(){
 
@@ -16,17 +16,16 @@ function Generation(){
         pdf.addImage(imgData, 'PNG', 0, 0, 595, 842); // A4 dimensions
         pdf.save('Votre-CV.pdf');
       };
-
-      PersonalInfos()
       
     return(
         <div id="generationPage">
         <Link to="/"><button id="retour" className="btn-screen2">Retour</button></Link>   
             <div id="pdf">
-              
+              <DraggableItems></DraggableItems>
                 </div> 
                 <button onClick={createPDF} className="btn-screen2" id="createPDF">Télécharger le PDF</button>
-                <button className="btn-screen2" id="colorsSettings" onClick={() => setColorSetting(true)}>Changer de couleur</button>
+                <button className="btn-screen2" id="colorsSettings" onClick={() => setColorSetting(v => !v)}>Changer de couleur</button>
+                {colorSetting && <SettingBox id="settingColor" divClass="settingDiv" content="en cours"></SettingBox>}
         </div>
     )
 }

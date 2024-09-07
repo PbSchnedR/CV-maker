@@ -5,6 +5,7 @@ import InputChamp from './input';
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import "./Home.css"
+import PersonalInfos from "./personalInfo";
 
 function Home(){
     const hobbyRef = useRef(null);
@@ -41,7 +42,7 @@ function Home(){
                     </div>
                 </div>
             </div>
-           <Link to="/generate"><button id="generateBtn">Generate</button></Link>
+           <Link to="/generate"><button id="generateBtn" onClick={PersonalInfos}>Generate</button></Link>
             </>
     );
 }

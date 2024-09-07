@@ -1,7 +1,7 @@
-function SettingBox({id}){
+function SettingBox({id, divClass, content}){
     return(
-        <div id={id}>
-            <p>tesrght</p>
+        <div id={id} className={divClass}>
+            <p>{content}</p>
         </div>
     )
 }

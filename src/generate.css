@@ -12,6 +12,22 @@ body{
     left: 10%;
 }
 
+#colorsSettings{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#settingColor{
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    background-color: antiquewhite;
+    width: 350px;
+    height: fit-content;
+    border-radius: 25px;
+}
+
 #createPDF{
     position: absolute;
     bottom: 25%;
@@ -33,6 +49,7 @@ body{
     width: 595px;
     height: 842px;
     padding: 10px;    
+    font-size: 18px;
 }
 
 #changeColor{
