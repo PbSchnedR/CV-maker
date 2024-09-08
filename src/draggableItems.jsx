@@ -8,7 +8,7 @@ function DraggableItems(){
       const AdditionalData = JSON.parse(AdditionalJson)
       const imgSrc = sessionStorage.getItem("imgSrc")    
       return(
-        <div>
+        <div id="pdfArea">
           <Draggable>
             <img alt="CV image" src={imgSrc} id="img_CV"></img>
           </Draggable>

@@ -1,0 +1,49 @@
+.Box{
+    height: 15px;
+    width: 15px;
+    border: solid 3px black;
+}
+
+.Box:hover{
+    cursor: pointer;
+}
+
+#redBox{
+    background-color: red;
+}
+
+#yellowBox{
+    background-color: yellow;
+}
+
+#blueBox{
+    background-color: blue;
+}
+
+#greenBox{
+    background-color: green;
+}
+
+#magentaBox{
+    background-color: magenta;
+}
+
+#grayBox{
+    background-color: gray;
+}
+
+#blackBox{
+    background-color: black;
+}
+
+#limeBox{
+    background-color: lime;
+}
+
+#orangeBox{
+    background-color: orange;
+}
+
+#orangeredBox{
+    background-color: orangered;
+}

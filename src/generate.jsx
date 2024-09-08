@@ -2,9 +2,10 @@ import { Link } from "react-router-dom"
 import "./generate.css"
 import html2canvas from "html2canvas";
 import {jsPDF} from 'jspdf'
-import { useState, useMemo } from "react";
+import { useState} from "react";
 import DraggableItems from "./draggableItems";
 import SettingBox from "./settingBox";
+import { ColorSettings } from "./settingContents";
 function Generation(){
 
     const [colorSetting, setColorSetting] = useState(false);
@@ -25,7 +26,7 @@ function Generation(){
                 </div> 
                 <button onClick={createPDF} className="btn-screen2" id="createPDF">Télécharger le PDF</button>
                 <button className="btn-screen2" id="colorsSettings" onClick={() => setColorSetting(v => !v)}>Changer de couleur</button>
-                {colorSetting && <SettingBox id="settingColor" divClass="settingDiv" content="en cours"></SettingBox>}
+                {colorSetting && <SettingBox id="settingColor" divClass="settingDiv" content={<ColorSettings></ColorSettings>}></SettingBox>}
         </div>
     )
 }

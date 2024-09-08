@@ -52,13 +52,11 @@ body{
     font-size: 18px;
 }
 
-#changeColor{
-    position: absolute;
-    bottom: 25%;
-    left: 10%;
-}
-
-.settingBox{
-    min-height: 100px;
+.settingDiv{
+    min-height: 80px;
     background-color: antiquewhite;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
