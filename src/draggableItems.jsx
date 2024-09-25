@@ -1,12 +1,14 @@
 import Draggable from "react-draggable";
 import "./items.css"
 function DraggableItems(){
-  
+  /*
     const MainJson = sessionStorage.getItem("MainInfos")
     const AdditionalJson = sessionStorage.getItem("AdditionalInfos")
       const MainData = JSON.parse(MainJson)
       const AdditionalData = JSON.parse(AdditionalJson)
-      const imgSrc = sessionStorage.getItem("imgSrc")    
+      const imgSrc = sessionStorage.getItem("imgSrc")   */
+       
+      /*
       return(
         <div id="pdfArea">
           <Draggable>
@@ -45,7 +47,7 @@ function DraggableItems(){
             </Draggable>
             {AdditionalData.skillUl.map((e, index) => <Draggable><li key={index} className="liCV">{e}</li></Draggable>)}
         </div>
-      )
+      )*/
      }
    
 export default DraggableItems

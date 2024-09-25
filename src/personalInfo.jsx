@@ -1,7 +1,7 @@
 function PersonalInfos(){
   
     try{
-      sessionStorage.clear()
+      // sessionStorage.clear()
 
       const ulHobby = document.querySelector("#hobbyUl");
   const ulExp = document.querySelector("#expUl");
@@ -33,11 +33,16 @@ function PersonalInfos(){
     return acc;
   }, {})
 
+  console.log(file)
+  console.log(newInputValues)
+  console.log(MoreInfoCategories)
+
+  /*
   const JSONInfos = JSON.stringify(newInputValues)
   const JSONAdditionalInfos = JSON.stringify(MoreInfoCategories)
   
   sessionStorage.setItem("MainInfos", JSONInfos)
-  sessionStorage.setItem("AdditionalInfos", JSONAdditionalInfos)
+  sessionStorage.setItem("AdditionalInfos", JSONAdditionalInfos)*/
     }catch(err){
       console.error("Nope : " + err)
     }

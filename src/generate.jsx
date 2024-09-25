@@ -6,6 +6,7 @@ import { useState} from "react";
 import DraggableItems from "./draggableItems";
 import SettingBox from "./settingBox";
 import { ColorSettings } from "./settingContents";
+import PersonalInfos from "./personalInfo";
 function Generation(){
 
     const [colorSetting, setColorSetting] = useState(false);
@@ -22,7 +23,7 @@ function Generation(){
         <div id="generationPage">
         <Link to="/"><button id="retour" className="btn-screen2">Retour</button></Link>   
             <div id="pdf">
-              <DraggableItems></DraggableItems>
+              <PersonalInfos></PersonalInfos>
                 </div> 
                 <button onClick={createPDF} className="btn-screen2" id="createPDF">Télécharger le PDF</button>
                 <button className="btn-screen2" id="colorsSettings" onClick={() => setColorSetting(v => !v)}>Changer de couleur</button>
